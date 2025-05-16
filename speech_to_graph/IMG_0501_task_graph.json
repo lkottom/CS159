@@ -1,0 +1,55 @@
+{
+    "nodes": [
+        {
+            "task_name": "assembly_step_0",
+            "task_description": "Place the first green Lego piece on top of the brown Lego piece in the middle",
+            "required_objects": [
+                "Brown_4x4_plate",
+                "Green_2x2"
+            ],
+            "reference_image": "assembly_0.png"
+        },
+        {
+            "task_name": "assembly_step_1",
+            "task_description": "Place a green Lego piece on top of the assembly (with green and brown pieces)",
+            "required_objects": [
+                "Green_2x2"
+            ],
+            "reference_image": "assembly_1.png"
+        },
+        {
+            "task_name": "assembly_step_2",
+            "task_description": "Place a yellow Lego piece on top of the green Lego piece",
+            "required_objects": [
+                "Yellow_2x4"
+            ],
+            "reference_image": "assembly_2.png"
+        },
+        {
+            "task_name": "assembly_step_3",
+            "task_description": "Place the red Lego piece on top of the yellow Lego piece",
+            "required_objects": [
+                "Red_2x4"
+            ],
+            "reference_image": "assembly_3.png"
+        }
+    ],
+    "edges": [
+        {
+            "source_node": "assembly_step_0",
+            "target_node": "assembly_step_1",
+            "vlm_response": "match"
+        },
+        {
+            "source_node": "assembly_step_1",
+            "target_node": "assembly_step_2",
+            "vlm_response": "match"
+        },
+        {
+            "source_node": "assembly_step_2",
+            "target_node": "assembly_step_3",
+            "vlm_response": "match"
+        }
+    ],
+    "image_directory": "assembly_photos"
+}

@@ -1,0 +1,17 @@
+# Environment Variables
+.env
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Virtual environment
+venv/
+
+# Ignore all .gguf model files
+*.gguf
+
