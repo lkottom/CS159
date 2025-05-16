@@ -114,24 +114,6 @@ Saved to `4o_mini_verification_metrics.csv`:
 ## 🧠 Model Info
 
 - **Transcription:** Mistral 7B, locally loaded
-- **Vision-Language Verification:** GPT-4o (OpenAI)
+- **Vision-Language Verification:** GPT-4o-mini vs. GPT-4o (OpenAI)
 
 ---
-
-## 🤝 Contributing
-
-Open to improvements or automation extensions! Feel free to fork and PR.
-
----
-
-## 📄 License
-
-Specify your license here (e.g., MIT, Apache 2.0)
-
----
-
-## 📝 TODO
-
-- [ ] Automate pipeline from transcription to GUI launch  
-- [ ] Add voice-controlled navigation  
-- [ ] Train custom VLM finetuned on LEGO-specific assemblies
