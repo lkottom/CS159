@@ -1,1 +1,2 @@
 4o trial: 15.8k tokens
+40-mini trial: 610k tokens
