@@ -113,7 +113,7 @@ Saved to `4o_mini_verification_metrics.csv`:
 
 ## 🧠 Model Info
 
-- **Transcription:** Mistral 7B, locally loaded
+- **Transcription:** Mistral 7B, locally loaded. Direct download link: https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF/blob/main/mistral-7b-instruct-v0.2.Q4_K_M.gguf
 - **Vision-Language Verification:** GPT-4o-mini vs. GPT-4o (OpenAI)
 
 ---
