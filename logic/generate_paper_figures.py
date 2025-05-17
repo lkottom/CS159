@@ -32,6 +32,15 @@ token_usage = {
     '4o Mini Model': 610000
 }
 
+# Print average accuracy and inference time for both models
+avg_accuracy_4o = df_4o['Human Marked Correct'].eq('Yes').mean() * 100
+avg_accuracy_4o_mini = df_4o_mini['Human Marked Correct'].eq('Yes').mean() * 100
+avg_time_4o = df_4o['Inference Time (s)'].mean()
+avg_time_4o_mini = df_4o_mini['Inference Time (s)'].mean()
+
+print(f"4o Model: Average Accuracy = {avg_accuracy_4o:.2f}% | Average Inference Time = {avg_time_4o:.2f} s")
+print(f"4o Mini Model: Average Accuracy = {avg_accuracy_4o_mini:.2f}% | Average Inference Time = {avg_time_4o_mini:.2f} s")
+
 # Figure 1: Performance Metrics Overview
 fig1 = plt.figure(figsize=(15, 10))
 gs = GridSpec(2, 2, figure=fig1, height_ratios=[1, 1.2])
@@ -120,8 +129,8 @@ width = 0.35
 ax4_twin = ax4.twinx()
 bars1 = ax4.bar(x - width/2, task_metrics['4o_Accuracy'], width, label='4o Accuracy', color='#2ecc71', alpha=0.7)
 bars2 = ax4.bar(x + width/2, task_metrics['4o_Mini_Accuracy'], width, label='4o Mini Accuracy', color='#3498db', alpha=0.7)
-line1 = ax4_twin.plot(x - width/2, task_metrics['4o_Time'], 'o-', label='4o Time', color='#e74c3c', linewidth=2)
-line2 = ax4_twin.plot(x + width/2, task_metrics['4o_Mini_Time'], 'o-', label='4o Mini Time', color='#c0392b', linewidth=2)
+line1 = ax4_twin.plot(x - width/2, task_metrics['4o_Time'], 'o-', label='4o Time', color='#e74c3c', linewidth=3, markersize=10, marker='o')
+line2 = ax4_twin.plot(x + width/2, task_metrics['4o_Mini_Time'], 's--', label='4o Mini Time', color='#8e44ad', linewidth=3, markersize=10, marker='s')
 
 ax4.set_ylabel('Accuracy (%)')
 ax4_twin.set_ylabel('Average Time (s)')
